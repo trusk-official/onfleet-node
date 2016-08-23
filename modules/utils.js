@@ -11,7 +11,7 @@ utils.serialize = function serialize(obj) {
 utils.matchPath = function matchPath(path, idArray) {
   let count = 0;
   return path.split('/').map((p) => {
-    const key = ((count < idArray.length) ? idArray[count++] : 'NO_KEY');
+    const key = (p.charAt(0) === ':' && count < idArray.length) ? idArray[count++] : 'NO_KEY';
     return (p.charAt(0) === ':') ? key : p;
   }).join('/');
 };
