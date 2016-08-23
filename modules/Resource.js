@@ -1,0 +1,34 @@
+const fetch = require('./fetch');
+const utils = require('./utils');
+
+function Resource(api) {
+  Object.assign(this, api);
+}
+
+Resource.prototype.endpoints = function endpoints(endpts) {
+  const that = this;
+  Object.keys(endpts).forEach((key) => {
+    that[key] = (...args) => {
+      let arglist = Array.prototype.slice.call(args, 0);
+      const lastarg = arglist[arglist.length - 1];
+      const callback = (utils.isFunction(lastarg) ? lastarg : undefined);
+      arglist = callback ? arglist.slice(0, -1) : arglist;
+      const body = (utils.isObject(lastarg) ? lastarg : undefined);
+      arglist = body ? arglist.slice(0, -1) : arglist;
+      const path = utils.matchPath(endpts[key].path, arglist);
+      const call = fetch(Object.assign({}, that.api, {
+        path,
+        method: endpts[key].method,
+      }, {
+        body,
+      }));
+      return callback ? call.then((data) => {
+        callback(null, data);
+      }).catch((e) => {
+        callback(e);
+      }) : call;
+    };
+  });
+};
+
+module.exports = Resource;
