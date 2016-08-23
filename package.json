@@ -1,6 +1,6 @@
 {
   "name": "onfleet",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "node.js wrapper for the Onfleet API",
   "main": "index.js",
   "license": "MIT",
