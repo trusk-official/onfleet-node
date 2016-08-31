@@ -3,7 +3,7 @@ const utils = {};
 utils.serialize = function serialize(obj) {
   const str = [];
   Object.keys(obj).forEach((p) => {
-    str.push(`${encodeURIComponent(p)}"="${encodeURIComponent(obj[p])}`);
+    str.push(`${encodeURIComponent(p)}=${encodeURIComponent(obj[p])}`);
   });
   return str.join('&');
 };
