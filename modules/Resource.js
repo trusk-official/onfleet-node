@@ -21,8 +21,8 @@ Resource.prototype.endpoints = function endpoints(endpts) {
       const call = fetch(Object.assign({}, that.api, {
         path,
         method: endpts[key].method,
-      }, {
-        body,
+        body: endpts[key].method.toLowerCase() === 'get' ? undefined : body,
+        query: endpts[key].method.toLowerCase() === 'get' ? body : undefined,
       }));
       return callback ? call.then((data) => {
         callback(null, data);
