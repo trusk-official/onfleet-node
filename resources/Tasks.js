@@ -8,7 +8,7 @@ module.exports = function Tasks(api) {
       method: 'POST',
     },
     list: {
-      path: '/tasks',
+      path: '/tasks/all',
       method: 'GET',
     },
     retrieve: {
