@@ -7,6 +7,10 @@ module.exports = function Teams(api) {
       path: '/teams',
       method: 'GET',
     },
+    create: {
+      path: '/teams',
+      method: 'POST',
+    },
     retrieve: {
       path: '/teams/:teamId',
       method: 'GET',
