@@ -27,8 +27,10 @@ module.exports = function promiseFactory(params) {
   })
   .then((response) => {
     if (response.status >= 200 && response.status < 300) {
-      return Object.assign(response.json(), {
-        code: response.status,
+      return response.text().then(function(text) {
+        return Object.assign((text ? JSON.parse(text) : {}), {
+          code: response.status,
+        });
       });
     }
     return response.json().then((error) => {
