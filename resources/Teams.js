@@ -23,6 +23,10 @@ module.exports = function Teams(api) {
       path: '/containers/teams/:teamId',
       method: 'PUT',
     },
+    delete: {
+      path: '/teams/:teamId',
+      method: 'DELETE',
+    },
   });
   return resource;
 };
