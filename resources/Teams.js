@@ -15,6 +15,10 @@ module.exports = function Teams(api) {
       path: '/teams/:teamId',
       method: 'GET',
     },
+    update: {
+      path: '/teams/:teamId',
+      method: 'PUT',
+    },
     upsertTask: {
       path: '/containers/teams/:teamId',
       method: 'PUT',
