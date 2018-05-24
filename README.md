@@ -61,7 +61,9 @@ onfleet.tasks.create(
   * [`list()`](http://docs.onfleet.com/docs/teams#list-teams)
   * [`retrieve(teamId)`](http://docs.onfleet.com/docs/teams#get-single-team)
   * [`create([params])`](http://docs.onfleet.com/docs/teams#create-team)
+  * [`update(teamId, [params])`](http://docs.onfleet.com/docs/teams#update-team)
   * [`upsertTask(teamId)`](http://docs.onfleet.com/docs/containers)
+  * [`delete(teamId)`](http://docs.onfleet.com/docs/teams#delete-team)
 * destinations
   * [`create([params])`](http://docs.onfleet.com/docs/destinations#create-new-destination)
   * [`retrieve(destinationId)`](http://docs.onfleet.com/docs/destinations#get-single-destination)
