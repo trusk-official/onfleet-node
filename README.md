@@ -60,6 +60,7 @@ onfleet.tasks.create(
 * teams
   * [`list()`](http://docs.onfleet.com/docs/teams#list-teams)
   * [`retrieve(teamId)`](http://docs.onfleet.com/docs/teams#get-single-team)
+  * [`create([params])`](http://docs.onfleet.com/docs/teams#create-team)
   * [`upsertTask(teamId)`](http://docs.onfleet.com/docs/containers)
 * destinations
   * [`create([params])`](http://docs.onfleet.com/docs/destinations#create-new-destination)
