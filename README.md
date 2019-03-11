@@ -62,7 +62,7 @@ onfleet.tasks.create(
   * [`retrieve(teamId)`](http://docs.onfleet.com/docs/teams#get-single-team)
   * [`create([params])`](http://docs.onfleet.com/docs/teams#create-team)
   * [`update(teamId, [params])`](http://docs.onfleet.com/docs/teams#update-team)
-  * [`upsertTask(teamId)`](http://docs.onfleet.com/docs/containers)
+  * [`upsertTask(teamId)`](http://docs.onfleet.com/docs/containers) **NB**: You can only append tasks using an offset and not overwrite a team's tasklist (as of 2019-03-11), contrary to what the documentation indicates.
   * [`delete(teamId)`](http://docs.onfleet.com/docs/teams#delete-team)
 * destinations
   * [`create([params])`](http://docs.onfleet.com/docs/destinations#create-new-destination)
