@@ -1,4 +1,6 @@
-# Onfleet node.js bindings
+# Onfleet node.js bindings [DEPRECATED]
+
+The onfleet team finally made its [own node.JS wrapper](https://github.com/onfleet/node-onfleet), use it instead.
 
 ## Installation
 
